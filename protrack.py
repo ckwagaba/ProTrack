@@ -4,6 +4,7 @@ from __future__ import division
 class ProTrack(object):
     '''This is the class that holds all our functions'''
     def __init__(self):
+        #we are getting the total number of skills and the skill name
         get_skills = raw_input("How many skills are there?\n")
         skills = int(get_skills)
         count_skills = 0
@@ -13,12 +14,13 @@ class ProTrack(object):
             name_of_skills = raw_input("Please input skill {0}\n".format(count_skills + 1))
             self.skills_list.append(name_of_skills)
             count_skills += 1
-
+        #We are getting the number of skills studied by the user and the skill name
         get_skills_studied = raw_input("Hello, How many skills Have you studied?\n")
         skills = int(get_skills_studied)
         count_skills = 0
         self.studied_skills_list = []
         num_of_skills_studied = skills
+        #checking if the number of skills input by user equals the total number of skills studied
         while num_of_skills_studied > count_skills:
             name_of_skills = raw_input("Please input skill {0}\n".format(count_skills + 1))
             if name_of_skills == 0:
