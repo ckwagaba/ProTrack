@@ -29,6 +29,7 @@ def docopt_cmd(func):
     This decorator is used to simplify the try/except block and pass the result
     of the docopt parsing to the called action.
     """
+
     def fn(self, arg):
         try:
             opt = docopt(fn.__doc__, arg)
@@ -56,7 +57,7 @@ def docopt_cmd(func):
 
 
 class MyInteractive (cmd.Cmd):
-    intro = 'Welcome to my ProTrack program!' \
+    intro = 'Welcome The ProTrack program!' \
         + ' (type help for a list of commands.)'
     prompt = '(ProTrack) '
     protrack = Protrack()
@@ -77,7 +78,6 @@ class MyInteractive (cmd.Cmd):
         """Usage: learnt_skill <arg> """
         self.protrack.learn_skill(arg)
 
-
         print(arg)
 
     def do_quit(self, arg):
@@ -85,27 +85,27 @@ class MyInteractive (cmd.Cmd):
 
         print('Good Bye!')
 
-
         exit()
 
+    @docopt_cmd
     def do_list_all_skills(self):
         """Usage: list_skills  """
         self.protrack.list_all_skills()
 
-
+    @docopt_cmd
     def do_list_done_skills(self):
         """Usage: done_skill  """
         self.protrack.list_done_skills()
 
+    @docopt_cmd
     def do_list_undone_skills(self):
         """Usage: undone_skill """
         self.protrack.list_undone_skills()
 
-
+    @docopt_cmd
     def do_show_progress(self):
         """Usage: show_progress """
         self.protrack.show_progress()
-
 
 
 opt = docopt(__doc__, sys.argv[1:])
