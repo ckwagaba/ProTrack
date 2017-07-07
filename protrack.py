@@ -4,7 +4,7 @@ class Skill(object):
         self.progress = False
 
 
-class Protrack(Skill):
+class Protrack:
     all_skills = []
 
     def add_skill(self, name_of_skill):
