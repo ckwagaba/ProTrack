@@ -1,6 +1,6 @@
 """Module for the tests of PROTRACK"""
 import unittest
-from protrack import Skill, Protrack
+from protrack import Protrack
 
 
 class ProtractTestCases(unittest.TestCase):
@@ -11,8 +11,8 @@ class ProtractTestCases(unittest.TestCase):
     def test_for_adding_skill(self):
         """Test for adding a skill"""
         self.example1.add_skill('Collaboration')
-        self.assertEqual( len(self.example1.all_skills), 1,
-                          msg="The skill is not being added")
+        self.assertEqual(len(self.example1.all_skills), 1,
+                         msg="The skill is not being added")
 
     def test_for_learning_skill(self):
         """Test for checking if skill was learnt"""
@@ -20,7 +20,7 @@ class ProtractTestCases(unittest.TestCase):
         self.example1.learn_skill('Communication Skills')
         self.example1.learn_skill('Collaboration')
         print(self.example1.all_skills)
-        self.assertTrue(all( obj.progress for obj in self.example1.all_skills),
+        self.assertTrue(all(obj.progress for obj in self.example1.all_skills),
                         msg="The Learning function is not working")
 
     def test_list_of_all_skills(self):
