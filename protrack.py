@@ -5,7 +5,7 @@ class Skill(object):
 
 
 class Protrack(Skill):
-    all_skills= []
+    all_skills = []
 
     def add_skill(self, name_of_skill):
         skill1 = Skill(name_of_skill)
@@ -20,12 +20,10 @@ class Protrack(Skill):
         for obj in self.all_skills:
             print(obj.name)
 
-
     def list_done_skills(self):
         for obj in self.all_skills:
             if obj.progress:
                 print(obj.name)
-
 
     def list_undone_skills(self):
         for obj in self.all_skills:
@@ -33,4 +31,9 @@ class Protrack(Skill):
                 print(obj.name)
 
     def show_progress(self):
-        pass
+        done_skills = []
+        for obj in self.all_skills:
+            if obj.progress:
+                done_skills.append(obj)
+
+        return (len(done_skills) / len(self.all_skills))*100
