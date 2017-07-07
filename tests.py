@@ -17,4 +17,5 @@ class ProtractTestCases(unittest.TestCase):
         print(self.example1.all_skills)
         self.assertTrue(all( obj.progress for obj in self.example1.all_skills), msg="The Learning function is not working")
 
-
+    def test_list_of_all_skills(self):
+        self.assertEqual(len(self.example1.list_all_skills()), 2 ,msg="This is not being returned correctly")

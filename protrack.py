@@ -17,8 +17,10 @@ class Protrack:
                 obj.progress = True
 
     def list_all_skills(self):
+        list_of_all_skills = []
         for obj in self.all_skills:
-            print(obj.name)
+            list_of_all_skills.append(obj.name)
+        return list_of_all_skills
 
     def list_done_skills(self):
         for obj in self.all_skills:
