@@ -30,9 +30,11 @@ class Protrack:
         return list_of_all_done_skills
 
     def list_undone_skills(self):
+        list_of_all_undone_skills = []
         for obj in self.all_skills:
             if not obj.progress:
-                print(obj.name)
+                list_of_all_undone_skills.append(obj.name)
+        return list_of_all_undone_skills
 
     def show_progress(self):
         done_skills = []
