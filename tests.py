@@ -25,5 +25,8 @@ class ProtractTestCases(unittest.TestCase):
 
     def test_list_of_all_undone_skills(self):
         self.assertEqual(len(self.example1.list_undone_skills()), 0,
-                         msg="List of undone skills not being returned correctly")
+                         msg="List of undone skills not being returned correctly.")
 
+    def test_for_progress(self):
+        self.assertEqual(self.example1.show_progress(), 100,
+                         msg="The progress is incorrect.")
