@@ -19,3 +19,6 @@ class ProtractTestCases(unittest.TestCase):
 
     def test_list_of_all_skills(self):
         self.assertEqual(len(self.example1.list_all_skills()), 2 ,msg="This is not being returned correctly")
+
+    def test_list_of_all_done_skills(self):
+        self.assertEqual(len(self.example1.list_done_skills()), 2 ,msg="This is not being returned correctly")
