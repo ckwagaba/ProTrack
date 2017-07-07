@@ -4,7 +4,6 @@ skills_list = ["collaboration", "integrity"]
 new_skill_list = []
 studied_list = []
 
-
 def add_skills(new_skill):
     # add new skills to our list
     new_skill_list.append(new_skill)
