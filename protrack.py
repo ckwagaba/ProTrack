@@ -1,6 +1,7 @@
-'''module docstring'''
+'''This is the ProTrack module which adds skills, gets skills studied, skills
+not studied and progress'''
 from __future__ import division
-class Skills(object):
+class ProTrack(object):
     '''This is the class that holds all our functions'''
     def __init__(self):
         get_skills = raw_input("How many skills are there?\n")
@@ -39,7 +40,7 @@ class Skills(object):
     def studied_skills(self):
         '''This functions generates a list of the skills studied by user'''
         if self.studied_skills_list == []:
-            return "You have not studied any of these skills below:\n" + str(self.skills_list) + "\n" + self.get_progress(3,5)
+            return "You have not studied any of these skills below:\n" + str(self.skills_list) + "\n" + self.get_progress(0,0)
         else:
             return "These are the skills you have studied:\n" + str(self.studied_skills_list) + "\n"
 
@@ -54,7 +55,7 @@ class Skills(object):
 
 
 
-access_skills = Skills()
+access_skills = ProTrack()
 print access_skills.studied_skills()
 print access_skills.not_studied_skills()
-print access_skills.get_progress(3, 5)
+print access_skills.get_progress(0, 0)
