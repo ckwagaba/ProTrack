@@ -57,7 +57,7 @@ class ProTrack(object):
 
 
 
-access_skills = ProTrack()
-print access_skills.studied_skills()
-print access_skills.not_studied_skills()
-print access_skills.get_progress(0, 0)
+show_skills = ProTrack()
+print show_skills.studied_skills()
+print show_skills.not_studied_skills()
+print show_skills.get_progress(0, 0)
